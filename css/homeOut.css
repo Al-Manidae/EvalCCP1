@@ -7,13 +7,12 @@ body {
 
 main {
     display: flex;
-    padding: 100px;
+    padding: 100px 0;
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 5vw;
+    gap: 2.5vw;
     align-self: stretch;
-    flex-wrap: wrap;
 }
 
 .accountBox {
@@ -28,7 +27,6 @@ main {
     border: 3px solid var(--aqua, #0B9991);
     box-shadow: 0px 5px 0px 0px var(--aqua-shadow, #0B999140);
 }
-
 .accountBox img {
     width: 125px;
     height: 125px;
@@ -36,13 +34,13 @@ main {
 }
 
 .embellishment-line {
-    width: 75vw;
+    width: auto;
     max-width: 1000px;
-    min-width: 700px;
+    /* min-width: 700px; */
     height: 560px;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 4vw;
+    right: 4vw;
     margin: auto;
     border-radius: 0px 0px 0px 100px;
     border-bottom: 10px solid var(--aqua, #0B9991);
@@ -52,5 +50,48 @@ main {
 }
 
 @media screen /* and (min-width: ???px) */ and (max-width:854px){
+    main {
+        gap: 2.5vw;
+    }
 
+    .accountBox {
+        width: 215px;
+        padding: 25px 15px;
+    }
+    .accountBox img {
+        width: 100px;
+        height: 100px;
+        filter: drop-shadow(0px 5px 0px var(--black-shadow, #00000040));
+    }
+
+    .embellishment-line {
+        height: 502px;
+    }
+}
+
+@media screen /* and (min-width: ???px) */ and (max-width:600px){
+    body {
+        padding: 50px 0 0 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 50px 0;
+        gap: 50px;
+    }
+
+    .accountBox {
+        width: 215px;
+        padding: 10px 15px;
+        gap: 20px;
+    }
+    .accountBox img {
+        width: 75px;
+        height: 75px;
+        filter: drop-shadow(0px 5px 0px var(--black-shadow, #00000040));
+    }
+
+    .embellishment-line {
+		display: none;
+    }
 }
