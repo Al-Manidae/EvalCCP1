@@ -1,0 +1,102 @@
+@import
+url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --crimson: #47062A;
+    --black: #1A1A1A;
+    --black-shadow: #00000040;
+    --yellow: #FFD000;
+    --yellow-shadow: #FFD00040;
+    --aqua: #0B9991;
+    --aqua-shadow: #0B999140;
+}
+
+body {
+    background-color: var(--black);
+    font-family: Barlow, Verdana, sans-serif;
+}
+
+#bg_grad {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(var(--crimson), #29131F, var(--black), var(--black));
+    z-index: -5;
+}
+
+header.offline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    text-align: center;
+}
+
+h1 {
+    color: var(--yellow, #FFD000);
+    text-shadow: 0px 5px 0px var(--black-shadow, #00000040);
+    font-family: Stalinist One;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+h2 {
+    color: var(--aqua, #0B9991);
+    text-shadow: 0px 5px 0px var(--black-shadow, #00000040);
+    font-family: Oxanium;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3 {
+    color: var(--aqua, #0B9991);
+    text-align: center;
+    text-shadow: 0px 5px 0px var(--black-shadow, #00000040);
+    font-family: Oxanium;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p {
+    color: var(--aqua, #0B9991);
+    text-align: center;
+    text-shadow: 0px 5px 0px var(--black-shadow, #00000040);
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+button.yellow{
+    display: flex;
+    border: none;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0px 12px;
+    background: var(--yellow, #FFD000);
+    box-shadow: 0px 2px 0px 0px var(--yellow-shadow, #FFD00040);
+    color: var(--aqua, #0B9991);
+    text-align: center;
+    font-family: Oxanium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+button:hover {
+    border-radius: 0px 6px;
+    box-shadow: 0px 5px 0px 0px var(--yellow-shadow, #FFD00040);
+}
