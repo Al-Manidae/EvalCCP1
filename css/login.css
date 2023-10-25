@@ -76,9 +76,11 @@ main {
     line-height: normal;
 }
 
-.form-field#divSubmit {
+.form-field input#submit {
     display: flex;
     border: none;
+    width: fit-content;
+    height: fit-content;
     padding: 15px 30px;
     justify-content: center;
     align-items: center;
@@ -86,15 +88,7 @@ main {
     border-radius: 0px 12px;
     background: var(--yellow, #FFD000);
     box-shadow: 0px 2px 0px 0px var(--yellow-shadow, #FFD00040);
-}
-.form-field#divSubmit:hover {
-    border-radius: 0px 6px;
-    box-shadow: 0px 5px 0px 0px var(--yellow-shadow, #FFD00040);
-}
-.form-field#divSubmit input {
     background-color: none;
-    margin: 0;
-    padding: 0;
     color: var(--aqua, #0B9991);
     text-align: center;
     font-family: Oxanium;
@@ -104,13 +98,9 @@ main {
     line-height: normal;
     box-shadow: none;
 }
-
-.form-field input#submit {
-width: auto;
-border: none;
-}
-.form-field input:focus {
-outline: none;
+.form-field input#submit:hover {
+    border-radius: 0px 6px;
+    box-shadow: 0px 5px 0px 0px var(--yellow-shadow, #FFD00040);
 }
 
 .form-field.error input {

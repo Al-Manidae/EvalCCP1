@@ -24,7 +24,7 @@ const isEmailValid = (email) => {
 
 // Vérif du mdp ------------------------------
 const isPasswordSecure = (password) => {
-    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#+-^\[\]])(?=.{8,})");
     return re.test(password);
 };
 
@@ -93,7 +93,7 @@ const checkPassword = () => {
     if (!isRequired(password)) {
         showError(passwordEl, 'Renseignez un mot de passe');
     } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Le mot de passe doit avoir au moins 8 caractères, dont une minuscule,une majuscule, un chiffre et un caractère spécial parmi les suivants (!@#$%^&*)');
+        showError(passwordEl, 'Le mot de passe doit avoir au moins 8 caractères, dont une minuscule,une majuscule, un chiffre et un caractère spécial parmi les suivants #+-^[]');
     } else {
         showSuccess(passwordEl);
         valid = true;
