@@ -1,0 +1,240 @@
+body {
+    display: flex;
+    padding: 100px 0 50px 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 100px 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2.5vw;
+    align-self: stretch;
+}
+
+.form {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 3px solid var(--aqua, #0B9991);
+    box-shadow: 0px 5px 0px 0px var(--aqua-shadow, #0B999140);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-field label {
+    display: flex;
+    width: 352px;
+    padding: 0px 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 0px solid var(--aqua, #0B9991);
+    color: var(--aqua, #0B9991);
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;    
+}
+
+.form-field input {
+    display: flex;
+    width: 352px;
+    height: 18px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--aqua, #0B9991);
+    box-shadow: 0px 2px 0px 0px var(--black-shadow, #00000040);
+    background-color: #f0f0f000;
+    color: var(--aqua, #0B9991);
+    font-family: Barlow;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.form-field input::placeholder {
+    color: var(--aqua, #0B9991);
+    font-family: Barlow;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.form-field#divSubmit {
+    display: flex;
+    border: none;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0px 12px;
+    background: var(--yellow, #FFD000);
+    box-shadow: 0px 2px 0px 0px var(--yellow-shadow, #FFD00040);
+}
+.form-field#divSubmit:hover {
+    border-radius: 0px 6px;
+    box-shadow: 0px 5px 0px 0px var(--yellow-shadow, #FFD00040);
+}
+.form-field#divSubmit input {
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    color: var(--aqua, #0B9991);
+    text-align: center;
+    font-family: Oxanium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    box-shadow: none;
+}
+
+.form-field input#submit {
+width: auto;
+border: none;
+}
+.form-field input:focus {
+outline: none;
+}
+
+.form-field.error input {
+border-color: var(--error-color);
+}
+
+.form-field.success input {
+border-color: var(--success-color);
+}
+
+.form-field small {
+color: var(--error-color);
+}
+
+.accountBox {
+    display: flex;
+    width: 260px;
+    padding: 40px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 10px;
+    border: 3px solid var(--aqua, #0B9991);
+    box-shadow: 0px 5px 0px 0px var(--aqua-shadow, #0B999140);
+}
+.accountBox img {
+    width: 125px;
+    height: 125px;
+    filter: drop-shadow(0px 5px 0px var(--black-shadow, #00000040));
+}
+
+.embellishment-line {
+    width: auto;
+    max-width: 1000px;
+    /* min-width: 700px; */
+    height: 560px;
+    position: absolute;
+    left: 4vw;
+    right: 4vw;
+    margin: auto;
+    border-radius: 0px 0px 0px 100px;
+    border-bottom: 10px solid var(--aqua, #0B9991);
+    border-left: 1px solid var(--aqua, #0B9991);
+    box-shadow: 0px 5px 0px 0px var(--aqua-shadow, #0B999140);
+    z-index: -3;
+}
+
+
+@media screen /* and (min-width: ???px) */ and (max-width:854px){
+    body {
+        padding: 100px 0px 50px 0px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .accountBox {
+        width: 215px;
+        padding: 25px 15px;
+    }
+    .accountBox img {
+        width: 100px;
+        height: 100px;
+        filter: drop-shadow(0px 5px 0px var(--black-shadow, #00000040));
+    }
+
+    .embellishment-line {
+        height: 841px;
+    }
+}
+
+@media screen /* and (min-width: ???px) */ and (max-width:600px){
+    body {
+        padding: 50px 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 50px 0;
+        gap: 50px;
+    }
+
+    .form {
+        width: 245px;
+        padding: 10px 15px;
+        gap: 15px;
+    }
+    
+    .form-field label {
+        display: flex;
+        width: 215px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        font-size: 16px;
+    }
+
+    .form-field input {
+        width: 215px;
+    }
+    .form-field input::placeholder {
+        font-size: 15px;
+    }
+
+    small {
+        font-size: 15px;        
+    }
+
+    .accountBox {
+        width: 215px;
+        padding: 10px 15px;
+        gap: 20px;
+    }
+    .accountBox img {
+        width: 75px;
+        height: 75px;
+        filter: drop-shadow(0px 5px 0px var(--black-shadow, #00000040));
+    }
+
+    .embellishment-line {
+		display: none;
+    }
+}

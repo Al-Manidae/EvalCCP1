@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunarpunk : Connexion</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stalinist+One|Oxanium|Barlow">
+    <link rel="stylesheet" href="../css/resetCSS.css">
+    <link rel="stylesheet" href="../css/styleGlobal.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<div id="bg_grad"></div>
+
+<header class="offline">
+    <a href="../index.html"><h1>Lunarpunk</h1></a>
+    <h2>Connexion</h2>
+</header>
+
+<main>
+    <form id="signup" class="form">
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email"
+            autocomplete="off" placeholder="E-mail">
+            <small></small>
+        </div>
+
+        <div class="form-field">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password"
+            autocomplete="off" placeholder="Mot de passe">
+            <small></small>
+        </div>
+
+        <div id="divSubmit" class="form-field error success">
+            <input id="submit" type="submit" value="Créer le compte">
+        </div>
+    </form>
+    <div class="accountBox">
+        <img src="../images/icon-register.svg" alt="icone d'inscription">
+        <p>Vous êtes nouveau ici ?</p>
+        <button onclick="location.href='register.html'" class="yellow" type="button">Vous connecter</button>
+    </div>
+    <div class="embellishment-line"></div>
+</main>
+
+<script src="../javascript/logIn.js"></script>
+</body>
+</html>
