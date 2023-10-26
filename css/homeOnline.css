@@ -31,3 +31,9 @@ main {
 #navigation .navbar {    
     align-items: center; 
 }
+
+@media screen /* and (min-width: ???px) */ and (max-width:1168px){
+    #navigation {
+        display: none;
+    }
+}
