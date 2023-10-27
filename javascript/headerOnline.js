@@ -10,7 +10,7 @@ let currentDate = new Date(),
     currentYear = currentDate.getFullYear();
 console.log(currentDate)
 
-document.getElementById("nom").innerHTML = firstname+" "+surname;
+document.getElementById("nom").innerHTML = "<br>"+firstname+" "+surname;
 document.getElementById("modalNom").innerHTML = nom;
 
 if (currentDay<10) {currentDay="0"+currentDay}
