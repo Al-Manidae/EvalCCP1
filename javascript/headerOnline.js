@@ -1,5 +1,6 @@
 // Récupérer le nom
-let nom = localStorage.getItem('nom');
+let surname = localStorage.getItem('surname'),
+    firstname = localStorage.getItem('firstname');
 
 //Récupération de la date
 let dateLogIn = new Date(localStorage.getItem('dateLogIn'));
@@ -9,7 +10,7 @@ let currentDate = new Date(),
     currentYear = currentDate.getFullYear();
 console.log(currentDate)
 
-document.getElementById("nom").innerHTML = nom;
+document.getElementById("nom").innerHTML = firstname+" "+surname;
 document.getElementById("modalNom").innerHTML = nom;
 
 if (currentDay<10) {currentDay="0"+currentDay}

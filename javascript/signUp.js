@@ -1,4 +1,5 @@
-const usernameEl = document.querySelector('#username');
+const SurnameEl = document.querySelector('#surname');
+const FirstnameEl = document.querySelector('#firstname');
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
 const confirmPasswordEl = document.querySelector('#confirm-password');
@@ -7,14 +8,12 @@ const form = document.querySelector('#signup');
 
 // Fonctions fléchées ------------------------
 const isRequired = value => value === '' ? false : true;
-// if (value === "") {
-//     false
-// } else {
-//     true
-// }
-// remplacé par 1 ligne
-// “?” est un if et le “:” est else
-const isBetween =(length,min,max)=>length<min || length>max ? false : true;
+
+// Vérif du nom/prenom --------------------------
+const isNameValid = (name) => {
+    const re = new RegExp("^[A-Za-z]{3,25}$");
+    return re.test(name);
+};
 
 // Vérif de l’email --------------------------
 const isEmailValid = (email) => {
@@ -24,7 +23,8 @@ const isEmailValid = (email) => {
 
 // Vérif du mdp ------------------------------
 const isPasswordSecure = (password) => {
-    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#+\-^\[\]])(?=.{8,})");
+    console.log(password);
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\#\+\-\^\[\]])(?=.{8,})/;
     return re.test(password);
 };
 
@@ -53,17 +53,32 @@ const showSuccess = (input) => {
 }
 
 // Validation du nom -------------------------
-const checkUsername = () => {
+const checkSurname = () => {
     let valid = false;
-    const min = 3, max = 25;
-    const username = usernameEl.value.trim();
+    const name = SurnameEl.value.trim();
 
-    if (!isRequired(username)) {
-        showError(usernameEl, 'Renseignez votre nom');
-    } else if (!isBetween(username.length, min, max)) {
-        showError(usernameEl, `Votre nom doit comprendre entre ${min} et ${max} caractères`)
+    if (!isRequired(name)) {
+        showError(SurnameEl, 'Renseignez votre nom');
+    } else if (!isNameValid(name)) {
+        showError(SurnameEl, `Votre nom doit comprendre entre 3 et 25 caractères et ne comporter que des lettres (sans accents)`)
     } else {
-        showSuccess(usernameEl);
+        showSuccess(SurnameEl);
+        valid = true;
+    }
+    return valid;
+}
+
+// Validation du prénom -------------------------
+const checkFirstname = () => {
+    let valid = false;
+    const name = FirstnameEl.value.trim();
+
+    if (!isRequired(name)) {
+        showError(FirstnameEl, 'Renseignez votre prénom');
+    } else if (!isNameValid(name)) {
+        showError(FirstnameEl, `Votre prénom doit comprendre entre 3 et 25 caractères et ne comporter que des lettres (sans accents)`)
+    } else {
+        showSuccess(FirstnameEl);
         valid = true;
     }
     return valid;
@@ -123,12 +138,14 @@ form.addEventListener('submit',function(e){
 // utilisation du prevent Default
     e.preventDefault();
 //validation des champs
-    let isUsernameValid = checkUsername();
+    let isSurnameValid = checkSurname();
+    let isFirstnameValid = checkFirstname();
     let isEmailValid = checkEmail();
     let isPasswordValid = checkPassword();
     let isConfirmPasswordValid = checkConfirmPassword();
 
-    let isFormValid = isUsernameValid &&
+    let isFormValid = isSurnameValid &&
+                    isFirstnameValid &&
                     isEmailValid &&
                     isPasswordValid &&
                     isConfirmPasswordValid;
@@ -137,11 +154,13 @@ form.addEventListener('submit',function(e){
         e.preventDefault();
     }else{
         // localStorage -----------------------------
-        let usernameVal =document.getElementById("username").value;
+        let surnameVal =document.getElementById("surname").value;
+        let firstnameVal =document.getElementById("firstname").value;
         let adressMail = document.getElementById("email").value;
         let passWord =password.value;
         //envoie dans le localStorage
-        localStorage.setItem("nom",usernameVal);
+        localStorage.setItem("surname",surnameVal);
+        localStorage.setItem("firstname",firstnameVal);
         localStorage.setItem("mail",adressMail);
         localStorage.setItem("passWord",passWord);
         console.log(localStorage.getItem('nom'));
