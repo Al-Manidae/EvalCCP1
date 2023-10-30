@@ -1,5 +1,5 @@
 # EvalCCP1
-DWWM évaluation CCP1. Du 24 au 27 oct. 2023
+CCP1 exam of DWWM. From October 24 to 27, 2023.
 
-Lien de la maquette Figma :
+Link to Figma mockup :
 https://www.figma.com/file/zBga6gWuWuNovEVuq3rIvO/DWWM-CCF1?type=design&node-id=0%3A1&mode=design&t=zuha3j9BZ8AjjCCM-1

@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+main {
+    display: flex;
+    margin: 0 3vw;
+    padding: 0 0 100px 0;
+    justify-content: space-around;
+    align-items: start;
+    align-content: start;
+    gap: 2.5vw;
+    align-self: stretch;
+}
+
+/* ------------------------------------------------- */
+
+#subjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 20px;
+}
+
+/* Style the header */
+#subjectHeader {
+    display: flex;
+    width: 100%;
+    padding: 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-radius: 0px 0px 0px 50px;
+    border-bottom: 10px solid var(--aqua, #0B9991);
+    border-left: 1px solid var(--aqua, #0B9991);
+    box-shadow: 0px 5px 0px 0px var(--aqua-shadow, #0B999140);
+}
+#subjectHeader div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+#subjectHeader input {
+    display: flex;
+    height: 38px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 10px;
+    border: 2px solid var(--aqua, #0B9991);
+    box-shadow: 0px 2px 0px 0px var(--black-shadow, #00000040);
+    background-color: #f0f0f000;
+    color: var(--aqua, #0B9991);
+    font-family: Barlow;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#subjectHeader input::placeholder {
+    color: var(--aqua, #0B9991);
+    font-family: Barlow;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+tbody#subjectList {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+tbody#subjectList tr {
+    display: flex;
+    padding: 10px 8px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    position: relative;
+    list-style-type: none;
+    border-radius: 20px 20px 0px 20px;
+    color: var(--aqua, #0B9991);
+    text-align: center;
+    text-shadow: 0px 5px 0px var(--black-shadow, #00000040);
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 2px solid var(--aqua, #0B9991);
+}
+
+/* Darker background-color on hover */
+tbody#subjectList tr:hover {
+    background: var(--aqua-shadow, #0B999140);
+}
+
+/* Style the infoAutor */
+tbody#subjectList tr td.infoAutor {
+    width: 25vw;
+    padding: 12px 16px 12px 16px;
+    font-size: 16px;
+}
+
+/* -------------------------------------------- */
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 75px;
+    gap: 30px;
+    align-self: stretch;    
+}
+#navigation .navbar {    
+    align-items: center; 
+}
+
+@media screen /* and (min-width: ???px) */ and (max-width:1168px){
+    body {
+        gap: 50px;
+    }
+    #navigation {
+        display: none;
+    }
+}
+
+@media screen /* and (min-width: ???px) */ and (max-width:660px){
+    #subjects {
+        margin: auto;
+    }
+    #subjectHeader {
+        padding: 15px 20px;
+    }
+    #subjectHeader div{
+        flex-direction: column;
+    }
+    #subjectHeader div input{
+        width: 75%;
+    }
+    tbody#subjectList {
+        width: 75vw;
+    }
+}
+
+@media screen /* and (min-width: ???px) */ and (max-width:600px){
+    body {
+        gap: 0px;
+    }
+    main {
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0;
+		border: none;
+        box-shadow: none;
+    }
+    .categorie {
+        gap: 20px;
+    }
+    tbody#subjectList {
+        width: 85vw;
+    }
+}
+
