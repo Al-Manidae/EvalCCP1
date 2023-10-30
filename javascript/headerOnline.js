@@ -8,10 +8,9 @@ let currentDate = new Date(),
     currentDay = currentDate.getDate(),
     currentMonth = currentDate.getMonth()+1,
     currentYear = currentDate.getFullYear();
-console.log(currentDate)
 
-document.getElementById("nom").innerHTML = firstname+" "+surname;
-document.getElementById("modalNom").innerHTML = nom;
+document.getElementById("nom").innerHTML = "<br>"+firstname+" "+surname;
+document.getElementById("modalNom").innerHTML = "<br>"+firstname+" "+surname;
 
 if (currentDay<10) {currentDay="0"+currentDay}
 if (currentMonth<10) {currentMonth="0"+currentMonth}

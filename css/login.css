@@ -120,24 +120,6 @@ border-color: var(--success-color);
 color: var(--error-color);
 }
 
-.accountBox {
-    display: flex;
-    width: 260px;
-    padding: 40px 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    border-radius: 10px;
-    border: 3px solid var(--aqua, #0B9991);
-    box-shadow: 0px 5px 0px 0px var(--aqua-shadow, #0B999140);
-}
-.accountBox img {
-    width: 125px;
-    height: 125px;
-    filter: drop-shadow(0px 5px 0px var(--black-shadow, #00000040));
-}
-
 .embellishment-line {
     width: auto;
     max-width: 1000px;
