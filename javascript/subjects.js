@@ -1,20 +1,3 @@
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementById("subjectList").getElementsByTagName("tr");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-    var autor = document.createElement("td");
-    let dateMsg = new Date(),
-    dateMsgDay = dateMsg.getDate(),
-    dateMsgMonth = dateMsg.getMonth()+1,
-    dateMsgYear = dateMsg.getFullYear();
-    let surname = localStorage.getItem('surname'),
-        firstname = localStorage.getItem('firstname');
-    var txt = document.createTextNode("Créé le "+dateMsgDay+"/"+dateMsgMonth+"/"+dateMsgYear+" par "+firstname+" "+surname);
-    autor.className = "infoAutor";
-    autor.appendChild(txt);
-    myNodelist[i].appendChild(autor);
-}
-
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var tr = document.createElement("tr");
@@ -27,9 +10,9 @@ function newElement() {
   } else {
     document.getElementById("subjectList").appendChild(tr);
     var autor = document.createElement("td");
+    tr.appendChild(autor);
     var txt = document.createTextNode(inputValue);
     autor.appendChild(txt);
-    myNodelist[i].appendChild(autor);
     
     var autor = document.createElement("td");
     let dateMsg = new Date(),
@@ -39,8 +22,13 @@ function newElement() {
     var txt = document.createTextNode("Créé le "+dateMsgDay+"/"+dateMsgMonth+"/"+dateMsgYear+" par "+firstname+" "+surname);
     autor.className = "infoAutor";
     autor.appendChild(txt);
-    myNodelist[i].appendChild(autor);
+    tr.appendChild(autor);
   }
-  document.getElementById("myInput").value = "";
-  
+  document.getElementById("myInput").value = "";  
 }
+
+// lien vers sujets
+var list = document.querySelector('tr');
+list.addEventListener('click', function(ev) {
+  window.location.href = "discution.html";
+}, false);
