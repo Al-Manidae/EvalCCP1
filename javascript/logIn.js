@@ -9,26 +9,20 @@ const isRequired = value => value === '' ? false : true;
 
 // Show errors -------------------------------
 const showError = (input, message)=>{
-// reprendre le form-field element
     const formField = input.parentElement;
     console.log(input);
     console.log(formField);
-// ajouter la class error et supprimer la class success
     formField.classList.add('error');
     formField.classList.remove('success');
-// afficher le message d'erreur
     const error = formField.querySelector('small');
     error.textContent = message;
 }
 
 // Is form valid ? ---------------------------
 const showSuccess = (input) => {
-// reprendre le form-field element
     const formField = input.parentElement;
-// ajouter la class success et supprimer la class error
     formField.classList.add('success');
     formField.classList.remove('error');
-// cacher le message d'erreur
     const error = formField.querySelector('small');
     error.textContent = '';
 }
@@ -69,21 +63,15 @@ const checkPassword = () => {
 
 // Submit form ------------------------------
 form.addEventListener('submit',function(e){
-// utilisation du prevent Default
     e.preventDefault();
-//validation des champs
     let isemailValid = checkemail();
     let isPasswordValid = checkPassword();
-
     let isFormValid = isemailValid &&
-                    isPasswordValid;
-    
+                    isPasswordValid;    
     if (isFormValid==false) {
         e.preventDefault();
     }else{
-        // localStorage -----------------------------
         let dateLogIn = new Date();
-        //envoie dans le localStorage
         localStorage.setItem("dateLogIn",dateLogIn);
         window.location.href = "forum-home.html";
     }

@@ -9,17 +9,21 @@ let currentDate = new Date(),
     currentMonth = currentDate.getMonth()+1,
     currentYear = currentDate.getFullYear();
 
+// affichage du nom
 document.getElementById("nom").innerHTML = "<br>"+firstname+" "+surname;
 document.getElementById("modalNom").innerHTML = "<br>"+firstname+" "+surname;
 
+// affichage de la date du jour
 if (currentDay<10) {currentDay="0"+currentDay}
 if (currentMonth<10) {currentMonth="0"+currentMonth}
 document.getElementById("date").innerHTML = currentDay+"/"+currentMonth+"/"+currentYear;
 document.getElementById("modalDate").innerHTML = currentDay+"/"+currentMonth+"/"+currentYear;
 
+// affichage de l'heure de connection
 document.getElementById("heure").innerHTML = dateLogIn.getHours()+":"+dateLogIn.getMinutes()+":"+dateLogIn.getSeconds();
 document.getElementById("modalHeure").innerHTML = dateLogIn.getHours()+":"+dateLogIn.getMinutes()+":"+dateLogIn.getSeconds();
 
+// menu burger + overlay ------------------------------
 let burgerOpn = document.getElementById("burgerOpn"),
     overlay = document.getElementById("overlay"),
     burgerModal = document.getElementById("burgerModal")

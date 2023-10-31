@@ -27,7 +27,7 @@ main {
     gap: 20px;
 }
 
-/* Style the header */
+/* encard de nouveau sujet */
 #subjectHeader {
     display: flex;
     width: 100%;
@@ -84,7 +84,7 @@ tbody#subjectList {
     padding: 0;
 }
 
-/* Style the list items */
+/* sujets */
 tbody#subjectList tr {
     display: flex;
     padding: 10px 8px;
@@ -106,12 +106,10 @@ tbody#subjectList tr {
     border-bottom: 2px solid var(--aqua, #0B9991);
 }
 
-/* Darker background-color on hover */
 tbody#subjectList tr:hover {
     background: var(--aqua-shadow, #0B999140);
 }
 
-/* Style the infoAutor */
 tbody#subjectList tr td.infoAutor {
     width: 25vw;
     padding: 12px 16px 12px 16px;
