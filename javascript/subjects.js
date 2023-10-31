@@ -1,4 +1,4 @@
-// Create a new list item when clicking on the "Add" button
+// création et remplisage de la nouvelle ligne du tableau
 function newElement() {
   var tr = document.createElement("tr");
   var sujet = document.createElement("td");
@@ -12,13 +12,12 @@ function newElement() {
     var autor = document.createElement("td");
     tr.appendChild(autor);
     var txt = document.createTextNode(inputValue);
-    autor.appendChild(txt);
-    
+    autor.appendChild(txt);    
     var autor = document.createElement("td");
     let dateMsg = new Date(),
-    dateMsgDay = dateMsg.getDate(),
-    dateMsgMonth = dateMsg.getMonth()+1,
-    dateMsgYear = dateMsg.getFullYear();
+      dateMsgDay = dateMsg.getDate(),
+      dateMsgMonth = dateMsg.getMonth()+1,
+      dateMsgYear = dateMsg.getFullYear();
     var txt = document.createTextNode("Créé le "+dateMsgDay+"/"+dateMsgMonth+"/"+dateMsgYear+" par "+firstname+" "+surname);
     autor.className = "infoAutor";
     autor.appendChild(txt);
@@ -28,7 +27,7 @@ function newElement() {
 }
 
 // lien vers sujets
-var list = document.querySelector('tr');
+var list = document.querySelector('tr'); // fonction que sur le premier tr mais querySelectorAll fonctionne pas et je comprends pas.
 list.addEventListener('click', function(ev) {
   window.location.href = "discution.html";
 }, false);

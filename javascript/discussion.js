@@ -1,11 +1,9 @@
-
-
-// Create a new list item when clicking on the "Add" button
+// création et remplisage de la nouvelle ligne du tableau
 function newElement() {
     var tr = document.createElement("tr");
     var sujet = document.createElement("td");
     var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
+    var t = document.createTextNode(inputValue); // n'accepte pas les retour à la ligne dans le textarea et j'arrive pas à changer ça.
     sujet.appendChild(t);
     if (inputValue === '') {
       alert("You must write something!");

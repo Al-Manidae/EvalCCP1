@@ -6,7 +6,6 @@ const confirmPasswordEl = document.querySelector('#confirm-password');
 
 const form = document.querySelector('#signup');
 
-// Fonctions fléchées ------------------------
 const isRequired = value => value === '' ? false : true;
 
 // Vérif du nom/prenom --------------------------
@@ -29,24 +28,18 @@ const isPasswordSecure = (password) => {
 
 // Show errors -------------------------------
 const showError = (input, message)=>{
-// reprendre le form-field element
     const formField = input.parentElement;
-// ajouter la class error et supprimer la class success
     formField.classList.remove('success');
     formField.classList.add('error');
-// afficher le message d'erreur
     const error = formField.querySelector('small');
     error.textContent = message;
 }
 
 // Is form valid ? ---------------------------
 const showSuccess = (input) => {
-// reprendre le form-field element
     const formField = input.parentElement;
-// ajouter la class success et supprimer la class error
     formField.classList.remove('error');
     formField.classList.add('success');
-// cacher le message d'erreur
     const error = formField.querySelector('small');
     error.textContent = '';
 }
@@ -134,9 +127,7 @@ const checkConfirmPassword = () => {
 
 // Submit form ------------------------------
 form.addEventListener('submit',function(e){
-// utilisation du prevent Default
     e.preventDefault();
-//validation des champs
     let isSurnameValid = checkSurname();
     let isFirstnameValid = checkFirstname();
     let isEmailValid = checkEmail();
@@ -152,12 +143,10 @@ form.addEventListener('submit',function(e){
     if (isFormValid==false) {
         e.preventDefault();
     }else{
-        // localStorage -----------------------------
         let surnameVal =document.getElementById("surname").value;
         let firstnameVal =document.getElementById("firstname").value;
         let adressMail = document.getElementById("email").value;
         let passWord =password.value;
-        //envoie dans le localStorage
         localStorage.setItem("surname",surnameVal);
         localStorage.setItem("firstname",firstnameVal);
         localStorage.setItem("mail",adressMail);

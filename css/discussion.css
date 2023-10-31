@@ -27,7 +27,7 @@ main {
     gap: 20px;
 }
 
-/* Style the header */
+/* encard de nouveau commentaire */
 #subjectHeader {
     display: flex;
     width: 100%;
@@ -84,7 +84,7 @@ tbody#subjectList {
     padding: 0;
 }
 
-/* Style the list items */
+/* commentaires */
 tbody#subjectList tr {
     display: flex;
     padding: 10px 8px 10px 0;
@@ -106,7 +106,6 @@ tbody#subjectList tr {
     border-bottom: 2px solid var(--aqua, #0B9991);
 }
 
-/* Style the infoAutor */
 tbody#subjectList tr td.infoAutor {
     width: 15vw;
     padding: 10px;
