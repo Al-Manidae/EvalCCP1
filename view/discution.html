@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunarpunk : Forum - Boulots de Merc</title>
+    <title>Lunarpunk : Forum - Discussion</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stalinist+One|Oxanium|Barlow">
     <link rel="stylesheet" href="../css/resetCSS.css">
     <link rel="stylesheet" href="../css/styleGlobal.css">
-    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="../css/discussion.css">
 </head>
 <body>
 <div id="bg_grad"></div>
@@ -51,30 +51,36 @@
 
 <main>
     <div id="subjects">
-        <div id="subjectHeader">
-            <h3>Forum - Boulots de Merc</h3>
-            <div>
-                <input type="text" id="myInput" placeholder="Titre du sujet">
-                <button onclick="newElement()" class="yellow" type="button">Créer un sujet</button>
-            </div>
-        </div>
+        <h3>Forum - Discussion</h3>
         
         <table>
             <tbody id="subjectList">
                 <tr>
-                    <td>Ce paumard connaisait pas le Ninjutsu (RIP)</td>
-                    <td class="infoAutor">Créé le 15/02/2077 par Valerie Bakkers</td>
+                    <td class="infoAutor">emilie gauthier le 31/10/2023 (10:44)</td>
+                    <td>[message supprimé par la moderation]</td>
                 </tr>
                 <tr>
-                    <td>Cherche fixer pour un bleu</td>
-                    <td class="infoAutor">Créé le 09/08/2075 par David Martinez</td>
+                    <td class="infoAutor">emilie gauthier le 31/10/2023 (10:44)</td>
+                    <td>[message supprimé par la moderation]</td>
                 </tr>
                 <tr>
-                    <td>Le client voulais m'enculer, c'est raté</td>
-                    <td class="infoAutor">Créé le 23/6/2076 par Iris Tanner</td>
+                    <td class="infoAutor">emilie gauthier le 31/10/2023 (10:44)</td>
+                    <td>[message supprimé par la moderation]</td>
+                </tr>
+                <tr>
+                    <td class="infoAutor">emilie gauthier le 31/10/2023 (10:44)</td>
+                    <td>[message supprimé par la moderation]</td>
                 </tr>
             </tbody>
         </table>
+        
+        <div id="subjectHeader">
+            <p>Votre commentaire</p>
+            <div>
+                <textarea name="myInput" id="myInput" placeholder="Votre commentaire" rows="5" cols="33"></textarea>
+                <button onclick="newElement()" class="yellow" type="button">Commenter</button>
+            </div>
+        </div>
     </div>
 
     <nav id="navigation">
@@ -96,7 +102,7 @@
     </nav>
 </main>
 
-<script src="../javascript/subjects.js"></script>
+<script src="../javascript/discussion.js"></script>
 <script src="../javascript/headerOnline.js"></script>
 </body>
 </html>
